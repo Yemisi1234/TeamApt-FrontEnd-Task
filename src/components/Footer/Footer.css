@@ -1,0 +1,197 @@
+@keyframes mymove {
+  0% {
+    bottom: 5%;
+  }
+  50% {
+    bottom: 30%;
+  }
+  100% {
+    bottom: 5%;
+  }
+}
+
+@keyframes rightmove {
+  0% {
+    bottom: 0%;
+  }
+  50% {
+    bottom: 25%;
+  }
+  100% {
+    bottom: 0%;
+  }
+}
+@keyframes rotatemove {
+ from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes rotate1 {
+from { -webkit-transform: rotate(0deg); }
+to { -webkit-transform: rotate(20deg); }
+}
+ 
+@-moz-keyframes rotate1 {
+from { -moz-transform: rotate(0deg); }
+to { -moz-transform: rotate(20deg); }
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #ecab03;
+  border: none;
+  box-shadow: none;
+  font-size: 14px;
+  width: 225px;
+  font-family: "Inter";
+  font-weight: 600;
+  border-radius: 4px;
+  margin-bottom: 220px;
+  color: white;
+  
+}
+.footer-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  padding-top:40px;
+
+}
+.gold_pot {
+  width: 425px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2;
+}
+
+.coin_left {
+  width: 145px;
+  position: absolute;
+  left: 30%;
+  bottom: 5%;
+  transform: translate(-30%, 0);
+  animation: mymove 5s infinite;
+}
+.coin_right {
+  width: 145px;
+  position: absolute;
+  left: 75%;
+  transform: translate(-70%, 0);
+  bottom: 0%;
+  animation: rightmove 5.1s infinite;
+}
+
+.gold_light {
+  height: 500px;
+  position: absolute;
+  bottom: -60%;
+  transform: translate(-50%, 0);
+  left: 25%;
+}
+.star1 {
+  position: absolute;
+  left: 20%;
+  bottom: 3%;
+}
+.star3 {
+  position: absolute;
+  left: 20%;
+  bottom: 65%;
+}
+.star2 {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+}
+
+
+@media screen and (max-width: 600px) {
+  .gold_light{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+  .gold_pot {
+    width: 100vw;
+  }
+  .coin_left {
+  left: 5%;
+}
+.coin_right {
+  left: 90%;
+}
+}
+
+  .gold_light {
+
+  -webkit-animation-name: rotation;
+          animation-name: rotation;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+  to {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}  
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .gold_light {
+    height: 500px;
+    position: absolute;
+    bottom: -70%;
+    transform: translate(-50%, 0);
+    left: 5%;
+    overflow: hidden;
+  }
+  .gold_pot{
+    bottom: -44px;
+  }
+  
+}
+body .coin-pot {
+  width: 75%;
+  margin-left: 40px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .gold_light{
+    overflow: hidden;
+    width: 100vw;
+    bottom: -215px;
+    left: -30px;
+    align-items: center;
+    justify-content: center;
+  }
+}
